@@ -1,0 +1,29 @@
+{
+  "name": "multi",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "version": "1.0.0",
+  "description": "A multi-purpose application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "cd backend && npm run lint",
+    "format": "npm run format:frontend && npm run format:backend",
+    "format:frontend": "cd frontend && npm run format",
+    "format:backend": "cd backend && npm run format",
+    "start:frontend": "yarn workspace frontend start",
+    "start:backend": "yarn workspace backend start"
+  },
+  "keywords": [],
+  "author": "satyaandm <satyaandm@gmail.com>",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1"
+  }
+}
